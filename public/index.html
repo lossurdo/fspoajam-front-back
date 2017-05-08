@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AppModule">
+    <head>
+        <title>Exemplo de CRUD RESTful</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../node_modules/angular/angular.min.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body ng-controller="AppController">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1>Exemplo de CRUD RESTful</h1>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h1>C</h1>                                        
+                    <div class="form-group form-inline">
+                        <label class="sr-only" for="">label</label>
+                        <input type="text" ng-model="reg.nome" class="form-control" placeholder="João da Silva">
+                        <button type="button" ng-click="salvar()" class="btn btn-primary">Salvar</button>
+                    </div>
+                </div>                
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h1>R</h1>                                        
+                    <div class="form-group form-inline">
+                        <label class="sr-only" for="">label</label>
+                        <input type="text" ng-model="pesq" class="form-control" placeholder="ID da pessoa (ex. 4)">
+                        <button type="button" ng-click="consultar()" class="btn btn-default">Consultar</button>                        
+                        <pre ng-show="resultado">{{resultado}}</pre>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="row">                
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h1>U</h1>                                        
+                    <div class="form-group form-inline">
+                        <label class="sr-only" for="">label</label>
+                        <input type="text" ng-model="pesq" class="form-control" placeholder="ID da pessoa (ex. 4)">
+                        <input type="text" ng-model="reg.nome" class="form-control" placeholder="Novo nome">
+                        <button type="button" ng-click="alterar()" class="btn btn-info">Alterar</button>
+                    </div>
+                </div>                
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h1>D</h1>                                        
+                    <div class="form-group form-inline">
+                        <label class="sr-only" for="">label</label>
+                        <input type="text" ng-model="pesq" class="form-control" placeholder="ID da pessoa (ex. 4)">
+                        <button type="button" ng-click="excluir()" class="btn btn-danger">Excluir</button>                        
+                    </div>
+                </div>                
+            </div>
+
+        </div> <!-- container -->
+
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>        
+    </body>
+</html>
