@@ -14,4 +14,20 @@ Passo-a-passo para instalação e teste do projeto:
 user@linux ~/fspoajam-front-back $ nodejs server.js 
 Ouvindo na porta 3000!
 ~~~
+
+Acesse o endereço http://localhost:3000 para visualizar uma página com um CRUD simples, permitindo cadastrar, consultar, alterar e apagar registros.
+
+Você pode **adaptar** este modelo para suas necessidades. Lembrando que ele foi criado para **fins de prototipagem** e desenvolvimento **rápido**.
+
+A arquitetura ficou dividida em:
+
+- **front-end** HTML, CSS, JavaScript:
+	- interface com o usuário; onde os dados são encaminhados para o back-end via AngularJS
+- **back-end** NodeJS com Express:
+	- onde são recebidas as chamadas HTTP para o CRUD e os dados são armazenados em um Array de Objetos (JSON) para fins de simulação.
+
+A camada RESTful criada obedece as premissas desde modelo. [Vide aqui](http://www.restapitutorial.com/lessons/httpmethods.html).
+
+Você pode testar o back-end RESTful (independente do front-end escolhido) usando uma extensão para o Chrome chamada de [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop).
+
 Qualquer dúvida entre em contato. Encontrou bugs? Fique a vontade para enviar *Pull Requests*.
